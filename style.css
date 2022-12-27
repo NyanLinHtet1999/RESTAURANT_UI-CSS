@@ -1,0 +1,435 @@
+*{
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      color: var(--gray);
+      box-sizing: border-box;
+}
+:root{
+     --orange: rgb(255, 194, 80);
+     --dark: #f28d0a;
+     --gray:rgb(68, 65, 65);
+}
+/* nav bar open */
+a {
+      text-decoration: none;
+}
+header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top:0;
+      background-color: rgb(189, 177, 177);
+      z-index: 10;
+}
+
+.logo{
+      padding-left: 10px;
+}
+.logo .fa-utensils{
+      vertical-align: super;
+      font-size: 30px;
+}
+.logo span{
+      font-size: 50px;
+      font-weight: 700;
+      color: var(--dark);
+      font-style: italic;
+}
+header .menu{
+      list-style-type: none;
+      display: flex;
+      justify-content: space-evenly;
+      width: 500px;
+      row-gap: 5px;
+      flex: wrap;
+
+}
+.menu li a{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 25px;
+      margin-top: 5px;
+      position: relative;
+      margin-bottom: 4px;
+}
+.menu  li div{
+      padding-top: 5px;
+}
+.menu li a::after{
+      content: "";
+      width: 0%;
+      height: 2px;
+      background-color: var(--dark);
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      transition: 0.5s;
+}
+.menu li a:hover::after, .active::after{
+      width: 100%;
+}
+.menu li a:hover .fa-solid ,.menu li a:hover .fa-solid+div, .menu li a:hover .fa-regular ,.menu li a:hover .fa-regular+div{
+      color: var(--dark);
+}
+
+.phone {
+      margin-right: 10px;
+      font-size: 20px;
+}
+
+.phone .phone-container{
+      background-color: var(--dark);
+      padding: 5px 8px;
+      border-radius: 20px;
+      margin-right: 10px;
+}
+.phone-container:hover{
+      filter: brightness(120%);
+}
+
+.phone .fa-brands{
+      opacity: 0.5;
+      transition: 0.5s;
+}
+.phone .fa-brands:hover{
+      color: var(--dark);
+}
+/* nav bar close */
+/* kitchen open */
+.kitchen{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 600px;
+}
+
+
+.kitchen img{
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      z-index: -1;
+}
+.healthy{
+      max-width: 500px;
+      text-align: center;
+      margin-top: 200px;
+}
+.healthy h1{
+      color: white;
+      font-size: 40px;
+}
+.healthy p{
+      color: white;
+      font-size: 23px;
+      padding: 30px 0px;
+}
+.choose{
+      display: inline-block;
+      background-color: var(--orange);
+      color: white;
+      padding: 10px 50px;
+      border-radius: 30px;
+      transition: 
+      0.5s;
+}
+.choose:hover{
+      background-color: var(--dark);
+}
+/* kitchen close */
+/* taste open */
+.taste{
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px auto;
+}
+.taste .food-select{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 20px 5px 30px;
+}
+.one-food{
+      display: flex;
+     flex-direction: row;
+     align-items: center;
+     gap: 2px;
+     transition: 0.5s;
+     padding: 5px 10px;
+}
+.one-food:hover{
+      background-color: var(--dark);
+}
+.one-food i{
+      font-size: 65px;
+}
+.one-food div h3{
+      font-size: 28px;
+}
+.one-food div p{
+      font-size: 18px;
+}
+.choose{
+      display: inline-block;
+      background-color: var(--orange);
+      color: white;
+      padding: 10px 50px;
+      border-radius: 30px;
+      transition: 
+      0.5s;
+}
+.choose:hover{
+      background-color: var(--dark);
+}
+.line{
+      min-width: 300px;
+      height: 2px;
+      background-color: rgb(202, 44, 44);
+      margin: 20px 10px;
+}
+
+/* taste close */
+/* recipe open */
+.recipes{
+      max-width: 1000px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin: auto;
+}
+.food-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 10px 30px;
+}
+.select-food{
+      min-width: 200px;
+      height: 150px;
+      border: none;
+      position: relative;
+}
+.select-food img{
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      object-position: center;
+      position: absolute;
+      top:0px;
+      left: 0px;
+}
+.select-food i{
+      z-index: 5;
+      position: absolute;
+      font-size: 50px;
+      top: 54px;
+      left: 84px;
+      display: none;
+
+}
+.select-food::after{
+      content: "";
+      width: 0%;
+      height: 100%;
+      position: absolute;
+      background-color: var(--orange);
+      opacity: 0.5;
+      top:0px;
+      left: 0px;
+      z-index: 2;
+}
+.select-food:hover::after{
+      width: 100%;
+}
+.select-food:hover i{
+      display: inline-block;
+}
+/* recipe close */
+/* blog open */
+.blog{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 900px;
+      margin: auto;
+      margin-bottom: 20px;
+}
+.blog-container{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      column-gap: 50px;
+}
+.about{
+      max-width: 700px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      margin:40px 10px 30px;
+}
+.chef{
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      overflow: hidden;
+      border: 2px solid var(--dark);
+}
+.chef img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+}
+.new{
+      max-width:500px ;
+}
+.new p{
+      font-size: 16px;
+}
+.blog-container .fa-solid{
+      font-size: 30px;
+      color: var(--orange);
+}
+.blog-container .fa-solid:hover{
+      color: var(--dark);
+}
+/* blog close */
+/* contact open */
+.contact{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-evenly;
+      background-color: var(--orange);
+      padding: 60px 5px;
+}
+.contact ul{
+      list-style-type: none;
+}
+.contact ul li b{
+      padding: 0px 0px 10px;
+      display: block;
+}
+.contact ul li{
+      font-size: 20px;
+
+}
+.contact ul li a:hover , .contact ul li a:hover .fa-brands{
+      color: var(--dark);
+}
+form input{
+      border: none;
+      border-radius: 20px;
+      padding: 5px 15px;
+      outline: none;
+}
+form button{
+      background-color: var(--dark);
+      padding: 5px 15px;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+}
+form button:hover{
+      transform: scale(1.02);
+}
+/* contact close */
+.footer{
+      text-align: center;
+      padding: 15px;
+      background-color: var(--dark);
+}
+/* width */
+::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: var(--orange);
+      border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--dark);
+    }
+@media (max-width: 900px) {
+      header .menu{
+            display: none;
+      }
+      .contact{
+            flex-direction: column;
+            row-gap: 30px;
+            padding: 20px 30px;
+      }
+      .contact .logo{
+            text-align: center;
+      }
+      .contact ul{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            justify-content: center;
+            row-gap: 10px;
+      }
+      .contact ul li b{
+            padding: 0px;
+      }
+      .contact ul li {
+            display: flex;
+            align-items: center;
+      }
+      .contact ul li form{
+            text-align: center;
+      }
+      form button{
+            margin-top: 10px;
+      }
+}
+@media (max-width: 850px) {
+      .blog-container{
+            margin: 0px 10px;
+      }
+}
+
+@media (max-width: 500px) {
+      .healthy{
+            margin: 0px 10px;
+      }
+}
+@media (max-width: 430px) {
+      .select-food{
+            min-width: 300px;
+      }
+      .select-food i{
+            left: 130px;
+      }
+}
+@media (max-width: 400px) {
+      header .phone .phone-container{
+            display: none;
+      }
+}
+@media (max-width: 350px) {
+      input{
+            width: 250px;
+      }
+}
+
